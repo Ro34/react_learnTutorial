@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class Hello extends React.Component{
+    //有状态组件需要render,生命周期底层的方法,需要通过它来渲染
+    render(){
+      return <h1>some text</h1>
+    }
+  }
+  ReactDOM.render(<Hello/>,document.getElementById("root"))
+</script>
+</body>
+</html>

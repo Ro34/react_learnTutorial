@@ -25,15 +25,15 @@
 
 <div id="root"></div>
 <script type="text/babel">
-    function Temp(){
+    function Temp(props){
         return <div>
             <h1>prop</h1>
-            <p>name,{}</p>
-            <p>age,{}</p>
+            <p>name,{props.name}</p>
+            <p>age,{props.age}</p>
         </div>
 
     }
-    ReactDOM.render(<Temp/>,document.getElementById("root"))
+    ReactDOM.render(<Temp name='abc' age='10'/>,document.getElementById("root"))
 </script>
 </body>
 </html>
