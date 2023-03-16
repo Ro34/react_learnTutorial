@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class List extends React.Component {
+    state ={
+      list : [
+        {id:1,txt:"C"},
+        {id:2,txt:"php"},
+        {id:3,txt:"java"},
+        {id:4,txt:"javaScript"},
+      ]
+    }
+    render(){
+      const arr = this.state.list
+      const lists = []
+      arr.map((item,) => {
+        let li = <li key = {item.id}>{item.id},{item.txt}</li>
+        lists.push(li)
+      })
+
+      return <div>
+        <ul>
+          {lists}
+        </ul>
+      </div>
+    }
+  }
+  ReactDOM.render(< List/>,document.getElementById("root"))
+</script>
+
+</body>
+</html>
