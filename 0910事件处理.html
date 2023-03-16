@@ -17,18 +17,29 @@
         name:"abc",
         age:10
       }
+      this.updateInfoFun = this.updateInfoFun.bind(this)
     }
 
+    //箭头函数用法
     updateInfo = () =>{
       this.setState({age:13})
     }
+
+    // 普通函数
+    updateInfoFun(){
+        this.setState({age:14})
+    }
+
     render(){
       return  <div>
         <h1>task</h1>
         <h2>name,{this.state.name}</h2>
         <h2>age{this.state.age}</h2>
-        <button onClick={this.updateInfo}>更新</button>
-
+          {/*常用*/}
+        <button onClick={this.updateInfo}>更新13</button>
+          <button onClick={this.updateInfoFun}>更新14</button>
+          <button onClick={() => this.updateInfoFun()}>更新14</button>
+          <button onClick={this.updateInfoFun.bind(this)}>更新14</button>
       </div>
     }
   }
