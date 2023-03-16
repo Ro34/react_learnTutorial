@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    .Red{
+      color: darkred;
+    }
+    .yellow{
+      color: yellow;
+    }
+    .green{
+        color: green;
+    }
+  </style>
+</head>
+<body>
+<div id="app1"></div>
+<script>
+  let cmp = React.createElement(
+          'h1',
+          {
+            className:"Red"
+          },
+          "some text",
+  )
+  ReactDOM.render(cmp,document.getElementById("app1"))
+</script>
+
+<div id="app2"></div>
+<script type="text/babel">
+  let name = "Ro"
+  let tpl = <h1 className="yellow">some text es 6,{name}</h1>
+  ReactDOM.render(tpl,document.getElementById("app2"))
+</script>
+
+<div id="app3"></div>
+<script type="text/babel">
+    let a = "app3"
+    ReactDOM.render(
+        <h1 className="green">Hello,{a}</h1>,
+        document.getElementById(("app3"))
+    )
+</script>
+</body>
+</html>

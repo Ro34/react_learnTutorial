@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .gray{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+    function tick() {
+        let time = new Date().toLocaleTimeString()
+        // 写多个标签，需要有一个根元素，必须要有父级，这里的div
+        let tpl = <div>
+            <h1 className="gray">time,{time}</h1>
+        </div>
+        ReactDOM.render(tpl, document.getElementById("app"))
+}
+setInterval(tick,1000)
+
+</script>
+
+</body>
+</html>

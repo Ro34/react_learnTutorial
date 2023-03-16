@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app0"></div>
+<script type="text/babel">
+    // 函数式组件,无状态组件
+    function H1(){
+        return <div>
+            <h1>h1</h1>
+            <h2>h2</h2>
+        </div>
+    }
+    ReactDOM.render(
+        <H1/>,
+        document.getElementById("app0")
+    )
+</script>
+
+<div id="root"></div>
+<script type="text/babel">
+    function Temp(){
+        return <div>
+            <h1>prop</h1>
+            <p>name,{}</p>
+            <p>age,{}</p>
+        </div>
+
+    }
+    ReactDOM.render(<Temp/>,document.getElementById("root"))
+</script>
+</body>
+</html>
